@@ -27,6 +27,11 @@ namespace Id::Pack
                 return static_cast<int>(m_size);
             }
 
+            int location() const noexcept
+            {
+                return static_cast<int>(m_offset);
+            }
+
             int pos() const noexcept
             {
                 return static_cast<int>(m_readPos);

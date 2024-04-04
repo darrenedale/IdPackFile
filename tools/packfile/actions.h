@@ -2,8 +2,8 @@
 // Created by darren on 03/04/24.
 //
 
-#ifndef IDPACKREADER_ACTIONS_H
-#define IDPACKREADER_ACTIONS_H
+#ifndef ID_PACK_TOOLS_PACKFILE_ACTIONS_H
+#define ID_PACK_TOOLS_PACKFILE_ACTIONS_H
 
 #include <string>
 #include <list>

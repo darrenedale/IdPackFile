@@ -2,8 +2,8 @@
 // Created by darren on 03/04/24.
 //
 
-#ifndef IDPACKREADER_EXITCODE_H
-#define IDPACKREADER_EXITCODE_H
+#ifndef ID_PACK_TOOLS_PACKFILE_EXITCODE_H
+#define ID_PACK_TOOLS_PACKFILE_EXITCODE_H
 
 namespace Id::Pack::Tools::PackFile
 {
@@ -13,6 +13,7 @@ namespace Id::Pack::Tools::PackFile
         MissingAction = 1,
         UnrecognisedAction = 2,
         MissingArgument = 50,
+        InvalidArgument = 51,
     };
 }
 

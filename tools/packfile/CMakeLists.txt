@@ -4,6 +4,8 @@ add_executable(
         main.cpp
         actions/list.cpp
         ../output.cpp
+        actions/extract.cpp
+        actions/extract.h
 )
 
 target_link_libraries(packfile idpac)

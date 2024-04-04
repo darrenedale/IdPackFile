@@ -6,6 +6,7 @@
 #include <iostream>
 #include "actions.h"
 #include "actions/list.h"
+#include "actions/extract.h"
 #include "../ExitCode.h"
 #include "../output.h"
 
@@ -19,28 +20,32 @@ namespace
 }
 
 
-void usage() noexcept
-{
-    std::cout << std::format(
-R"(Process ID software PACK (.pac) files.
-
-Usage: {} action [...args]
-
-  action:
-    list     - list the files in the PACK file
-)", executable);
-}
-
-
 const ActionList & actions() noexcept
 {
     static ActionList actions;
 
     if (actions.empty()) {
-        actions.emplace_back("list", "List the files in the PACk file", Actions::list);
+        actions.emplace_back("list", "List the files in one or more PACK file(s)", Actions::list);
+        actions.emplace_back("extract", "Extract one or more files from a single PACK file", Actions::extract);
     }
 
     return actions;
+}
+
+
+void usage() noexcept
+{
+    std::cout << std::format(
+R"(Process ID software PACK (.pak) files.
+
+Usage: {} action [...args]
+
+  action:
+)", executable);
+
+    for (const auto & action : actions()) {
+        std::cout << std::format("    {: <10} - {}", action.command, action.description) << "\n";
+    }
 }
 
 

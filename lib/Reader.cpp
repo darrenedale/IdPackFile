@@ -66,7 +66,7 @@ std::string Reader::File::read(int bytes)
 
 std::string Reader::File::contents() const noexcept
 {
-    m_inStream.seekg(m_readPos);
+    m_inStream.seekg(m_offset);
     std::string ret(size(), 0);
     m_inStream.read(ret.data(), size());
     return ret;
@@ -249,7 +249,7 @@ Reader::File Reader::file(int idx) const noexcept
 {
     assert(0 <= idx && fileCount() > idx);
     ensureIndex();
-    return File(*m_inStream, m_fileIndex[idx].fileOffset, m_fileIndex[idx].fileSize);
+    return {*m_inStream, m_fileIndex[idx].fileOffset, m_fileIndex[idx].fileSize};
 }
 
 
@@ -258,7 +258,7 @@ Reader::File Reader::file(const std::string & fileName) const noexcept
     ensureIndex();
     assert(has(fileName));
     const auto & indexEntry = m_fileIndexByName[fileName];
-    return File(*m_inStream, indexEntry.fileOffset, indexEntry.fileSize);
+    return {*m_inStream, indexEntry.fileOffset, indexEntry.fileSize};
 }
 
 

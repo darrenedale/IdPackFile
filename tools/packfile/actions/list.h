@@ -2,8 +2,8 @@
 // Created by darren on 03/04/24.
 //
 
-#ifndef IDPACKREADER_ACTION_LIST_H
-#define IDPACKREADER_ACTION_LIST_H
+#ifndef TOOLS_PACKFILE_ACTION_LIST_H
+#define TOOLS_PACKFILE_ACTION_LIST_H
 
 #include "../actions.h"
 

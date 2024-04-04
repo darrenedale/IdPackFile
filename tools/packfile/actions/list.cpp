@@ -17,7 +17,6 @@ using Id::Pack::Reader;
 
 int Id::Pack::Tools::PackFile::Actions::list(const ActionArguments & args) noexcept
 {
-    std::string fileName;
     bool verbose = false;
     ActionArguments::const_iterator it;
 
