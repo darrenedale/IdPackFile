@@ -1,5 +1,5 @@
 add_library(
-        idpac
+        idpak
         Reader.cpp
         Reader.h
 )

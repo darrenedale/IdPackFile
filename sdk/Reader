@@ -1,6 +1,6 @@
 
-#ifndef LIBPACKFILE_PACKREADER
-#define LIBPACKFILE_PACKREADER
+#ifndef LIBIDPAK_PACKREADER
+#define LIBIDPAK_PACKREADER
 
 #include <cstdint>
 #include <iostream>

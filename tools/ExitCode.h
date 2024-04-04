@@ -1,12 +1,9 @@
-//
-// Created by darren on 03/04/24.
-//
+#ifndef TOOLS_EXITCODE_H
+#define TOOLS_EXITCODE_H
 
-#ifndef ID_PACK_TOOLS_PACKFILE_EXITCODE_H
-#define ID_PACK_TOOLS_PACKFILE_EXITCODE_H
-
-namespace Id::Pack::Tools::PackFile
+namespace Id::Pack::Tools
 {
+    /** Common exit codes for tools. */
     enum ExitCode
     : int {
         Ok = 0,

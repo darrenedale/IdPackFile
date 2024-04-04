@@ -1,7 +1,3 @@
-//
-// Created by darren on 03/04/24.
-//
-
 #include <format>
 #include <iostream>
 #include "actions.h"
@@ -10,14 +6,11 @@
 #include "../ExitCode.h"
 #include "../output.h"
 
-
 using namespace Id::Pack::Tools::PackFile;
 using Id::Pack::Tools::error;
+using Id::Pack::Tools::ExitCode;
 
-namespace
-{
-    std::string executable;
-}
+std::string g_executable;
 
 
 const ActionList & actions() noexcept
@@ -41,17 +34,17 @@ R"(Process ID software PACK (.pak) files.
 Usage: {} action [...args]
 
   action:
-)", executable);
+)", g_executable);
 
     for (const auto & action : actions()) {
-        std::cout << std::format("    {: <10} - {}", action.command, action.description) << "\n";
+        std::cout << std::format("    {: <10}  {}", action.command, action.description) << "\n";
     }
 }
 
 
 int main(int argc, char ** argv)
 {
-    executable = argv[0];
+    g_executable = argv[0];
 
     if (1 == argc) {
         error("Missing action");
@@ -75,5 +68,6 @@ int main(int argc, char ** argv)
     }
 
     error(std::format(R"(Unrecognised action "{}")", command));
+    usage();
     return ExitCode::UnrecognisedAction;
 }

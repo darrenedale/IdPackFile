@@ -1,7 +1,3 @@
-//
-// Created by darren on 04/04/24.
-//
-
 #ifndef TOOLS_PACKFILE_ACTION_EXTRACT_H
 #define TOOLS_PACKFILE_ACTION_EXTRACT_H
 

@@ -1,7 +1,3 @@
-//
-// Created by darren on 03/04/24.
-//
-
 #ifndef TOOLS_PACKFILE_ACTION_LIST_H
 #define TOOLS_PACKFILE_ACTION_LIST_H
 

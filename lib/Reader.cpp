@@ -1,7 +1,3 @@
-//
-// Created by darren on 03/04/24.
-//
-
 #include <cassert>
 #include <fstream>
 #include <iostream>
